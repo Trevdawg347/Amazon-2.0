@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -124,10 +124,53 @@
                     <view key="view" contentMode="scaleToFill" id="b5Y-lM-lMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="W3t-Rg-DkV" customClass="SearchTextField" customModule="Amazon_2_0" customModuleProvider="target">
+                                <rect key="frame" x="10" y="150" width="394" height="55"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="GGc-JY-zJa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FlQ-EQ-5gl">
+                                <rect key="frame" x="0.0" y="215" width="414" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tOT-27-K9E">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2jl-k2-SNn">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="enC-PH-dEH">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gm8-Pe-APi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gm8-Pe-APi" firstAttribute="trailing" secondItem="W3t-Rg-DkV" secondAttribute="trailing" constant="10" id="VFp-7t-yHh"/>
+                            <constraint firstItem="gm8-Pe-APi" firstAttribute="bottom" secondItem="FlQ-EQ-5gl" secondAttribute="bottom" id="YeE-tC-5Ix"/>
+                            <constraint firstItem="FlQ-EQ-5gl" firstAttribute="top" secondItem="W3t-Rg-DkV" secondAttribute="bottom" constant="10" id="ZUb-eJ-cmF"/>
+                            <constraint firstItem="gm8-Pe-APi" firstAttribute="trailing" secondItem="FlQ-EQ-5gl" secondAttribute="trailing" id="eqn-1W-Rcg"/>
+                            <constraint firstItem="W3t-Rg-DkV" firstAttribute="top" secondItem="gm8-Pe-APi" secondAttribute="top" constant="10" id="pKq-ON-yEA"/>
+                            <constraint firstItem="FlQ-EQ-5gl" firstAttribute="leading" secondItem="gm8-Pe-APi" secondAttribute="leading" id="q7W-BT-fdL"/>
+                            <constraint firstItem="W3t-Rg-DkV" firstAttribute="leading" secondItem="gm8-Pe-APi" secondAttribute="leading" constant="10" id="zxz-fs-Ztv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="VBz-il-dso"/>
+                    <connections>
+                        <outlet property="collectionView" destination="FlQ-EQ-5gl" id="uqW-8n-hoH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANd-LG-MyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

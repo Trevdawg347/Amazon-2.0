@@ -19,9 +19,12 @@ class ShopViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 1
-        layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3 - 2, height: UIScreen.main.bounds.width / 3 - 2)
         collectionView.collectionViewLayout = layout
         collectionView.register(PostView.nib(), forCellWithReuseIdentifier: PostView.identifier)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "cart"), primaryAction: UIAction() { _ in
+            print("Hi")
+        })
     }
 
 }
@@ -30,7 +33,7 @@ extension ShopViewController: UICollectionViewDataSource, UICollectionViewDelega
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostView.identifier, for: indexPath) as! PostView
-        cell.setup()
+        cell.setup(title: indexPath.item.isMultiple(of: 3))
         return cell
     }
     

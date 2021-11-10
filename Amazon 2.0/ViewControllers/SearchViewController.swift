@@ -15,11 +15,17 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 1
-        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 2
+        layout.minimumInteritemSpacing = 2
         layout.itemSize = CGSize(width: view.bounds.width / 3 - 2, height: view.bounds.width / 3 - 2)
         collectionView.collectionViewLayout = layout
         collectionView.register(PostView.nib(), forCellWithReuseIdentifier: PostView.identifier)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "cart"), primaryAction: UIAction() { [weak self] _ in
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "cart")
+            vc.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(vc, animated: true)
+        })
     }
 }
 

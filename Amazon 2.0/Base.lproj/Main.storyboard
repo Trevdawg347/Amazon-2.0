@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,29 +53,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9p-KU-oPQ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aF0-Y6-tOC">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Qg-FW-z8T">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                    </view>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="bn5-v0-6qV"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="JVU-GP-B7B"/>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LcZ-8m-ZeL">
+                                    <size key="itemSize" width="414" height="414"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X7U-X6-fgy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="g9p-KU-oPQ" firstAttribute="trailing" secondItem="X7U-X6-fgy" secondAttribute="trailing" id="OOf-nU-qyC"/>
-                            <constraint firstItem="g9p-KU-oPQ" firstAttribute="leading" secondItem="X7U-X6-fgy" secondAttribute="leading" id="TeB-7c-EOl"/>
-                            <constraint firstItem="g9p-KU-oPQ" firstAttribute="bottom" secondItem="X7U-X6-fgy" secondAttribute="bottom" id="Tw0-vH-6us"/>
-                            <constraint firstItem="g9p-KU-oPQ" firstAttribute="top" secondItem="X7U-X6-fgy" secondAttribute="top" id="mFy-Jf-j3a"/>
+                            <constraint firstItem="X7U-X6-fgy" firstAttribute="bottom" secondItem="aF0-Y6-tOC" secondAttribute="bottom" id="2Y5-SQ-JL3"/>
+                            <constraint firstItem="aF0-Y6-tOC" firstAttribute="top" secondItem="X7U-X6-fgy" secondAttribute="top" id="7iw-SA-AdZ"/>
+                            <constraint firstItem="X7U-X6-fgy" firstAttribute="trailing" secondItem="aF0-Y6-tOC" secondAttribute="trailing" id="MSf-EF-DJZ"/>
+                            <constraint firstItem="aF0-Y6-tOC" firstAttribute="leading" secondItem="X7U-X6-fgy" secondAttribute="leading" id="Tdv-7p-6S5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shop" largeTitleDisplayMode="always" id="1Gj-jD-sZL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="aF0-Y6-tOC" id="MlE-43-2yF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNm-b0-KDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8e-AN-zpo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="1280"/>
+            <point key="canvasLocation" x="-204.34782608695653" y="1279.6875"/>
         </scene>
         <!--Login-->
         <scene sceneID="h6Z-9R-8F0">
@@ -154,7 +157,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-vi-GGP">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-vi-GGP">
                                 <rect key="frame" x="15" y="150" width="384" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
@@ -163,7 +166,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-i5-tM9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-i5-tM9">
                                 <rect key="frame" x="15" y="210" width="384" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
@@ -178,7 +181,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="llU-g2-KYa"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>

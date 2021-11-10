@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047213092EDF80607CF3A202 /* Pods_Amazon_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1791C11132CBE00EB6FABD93 /* Pods_Amazon_2_0.framework */; };
 		52BC52E6273B4AB700B1D2C3 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC52E5273B4AB700B1D2C3 /* Firebase.swift */; };
 		52BD16F1273B029C002A00ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16F0273B029C002A00ED /* AppDelegate.swift */; };
 		52BD16F3273B029C002A00ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16F2273B029C002A00ED /* SceneDelegate.swift */; };
@@ -17,9 +18,12 @@
 		E022ECD1273B4407002F81F9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022ECD0273B4407002F81F9 /* SearchViewController.swift */; };
 		E022ECD3273B440E002F81F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022ECD2273B440E002F81F9 /* ProfileViewController.swift */; };
 		E022ECD5273B4516002F81F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022ECD4273B4516002F81F9 /* LoginViewController.swift */; };
+		E022ECD9273B65E6002F81F9 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022ECD7273B65E6002F81F9 /* PostView.swift */; };
+		E022ECDA273B65E6002F81F9 /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E022ECD8273B65E6002F81F9 /* PostView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1791C11132CBE00EB6FABD93 /* Pods_Amazon_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Amazon_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BC52E5273B4AB700B1D2C3 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		52BD16ED273B029C002A00ED /* Amazon 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amazon 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD16F0273B029C002A00ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,9 +33,13 @@
 		52BD16F9273B029F002A00ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52BD16FC273B029F002A00ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52BD16FE273B029F002A00ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A74BD00F6B400CC5FEF4376 /* Pods-Amazon 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amazon 2.0.release.xcconfig"; path = "Target Support Files/Pods-Amazon 2.0/Pods-Amazon 2.0.release.xcconfig"; sourceTree = "<group>"; };
+		A72AB47E98CF1B3AA9E95705 /* Pods-Amazon 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amazon 2.0.debug.xcconfig"; path = "Target Support Files/Pods-Amazon 2.0/Pods-Amazon 2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		E022ECD0273B4407002F81F9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E022ECD2273B440E002F81F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E022ECD4273B4516002F81F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E022ECD7273B65E6002F81F9 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		E022ECD8273B65E6002F81F9 /* PostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +47,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047213092EDF80607CF3A202 /* Pods_Amazon_2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52BC52E4273B4A9D00B1D2C3 /* Firebase */ = {
+		52BC52E4273B4A9D00B1D2C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				52BC52E5273B4AB700B1D2C3 /* Firebase.swift */,
 			);
-			path = Firebase;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		52BD16E4273B029C002A00ED = {
@@ -58,6 +67,8 @@
 			children = (
 				52BD16EF273B029C002A00ED /* Amazon 2.0 */,
 				52BD16EE273B029C002A00ED /* Products */,
+				E548E8707D77C45BA0EFD7A7 /* Pods */,
+				BCE47A8DAF85DE0E86304D03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,7 +85,8 @@
 			children = (
 				52BD16F0273B029C002A00ED /* AppDelegate.swift */,
 				52BD16F2273B029C002A00ED /* SceneDelegate.swift */,
-				52BC52E4273B4A9D00B1D2C3 /* Firebase */,
+				52BC52E4273B4A9D00B1D2C3 /* Model */,
+				E022ECD6273B65CA002F81F9 /* Views */,
 				E022ECCF273B4354002F81F9 /* ViewControllers */,
 				52BD16F6273B029C002A00ED /* Main.storyboard */,
 				52BD16F9273B029F002A00ED /* Assets.xcassets */,
@@ -82,6 +94,14 @@
 				52BD16FE273B029F002A00ED /* Info.plist */,
 			);
 			path = "Amazon 2.0";
+			sourceTree = "<group>";
+		};
+		BCE47A8DAF85DE0E86304D03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1791C11132CBE00EB6FABD93 /* Pods_Amazon_2_0.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E022ECCF273B4354002F81F9 /* ViewControllers */ = {
@@ -95,6 +115,25 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		E022ECD6273B65CA002F81F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E022ECD7273B65E6002F81F9 /* PostView.swift */,
+				E022ECD8273B65E6002F81F9 /* PostView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E548E8707D77C45BA0EFD7A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A72AB47E98CF1B3AA9E95705 /* Pods-Amazon 2.0.debug.xcconfig */,
+				5A74BD00F6B400CC5FEF4376 /* Pods-Amazon 2.0.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52BD1701273B029F002A00ED /* Build configuration list for PBXNativeTarget "Amazon 2.0" */;
 			buildPhases = (
+				752E716CEEF206F729BFC6D1 /* [CP] Check Pods Manifest.lock */,
 				52BD16E9273B029C002A00ED /* Sources */,
 				52BD16EA273B029C002A00ED /* Frameworks */,
 				52BD16EB273B029C002A00ED /* Resources */,
+				BF33DB2938E2AC221AF3DCE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,11 +195,54 @@
 			files = (
 				52BD16FD273B029F002A00ED /* LaunchScreen.storyboard in Resources */,
 				52BD16FA273B029F002A00ED /* Assets.xcassets in Resources */,
+				E022ECDA273B65E6002F81F9 /* PostView.xib in Resources */,
 				52BD16F8273B029C002A00ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		752E716CEEF206F729BFC6D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Amazon 2.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF33DB2938E2AC221AF3DCE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Amazon 2.0/Pods-Amazon 2.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Amazon 2.0/Pods-Amazon 2.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Amazon 2.0/Pods-Amazon 2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52BD16E9273B029C002A00ED /* Sources */ = {
@@ -167,6 +251,7 @@
 			files = (
 				52BC52E6273B4AB700B1D2C3 /* Firebase.swift in Sources */,
 				E022ECD5273B4516002F81F9 /* LoginViewController.swift in Sources */,
+				E022ECD9273B65E6002F81F9 /* PostView.swift in Sources */,
 				52BD16F5273B029C002A00ED /* ShopViewController.swift in Sources */,
 				52BD16F1273B029C002A00ED /* AppDelegate.swift in Sources */,
 				E022ECD3273B440E002F81F9 /* ProfileViewController.swift in Sources */,
@@ -315,6 +400,7 @@
 		};
 		52BD1702273B029F002A00ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A72AB47E98CF1B3AA9E95705 /* Pods-Amazon 2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +420,7 @@
 		};
 		52BD1703273B029F002A00ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A74BD00F6B400CC5FEF4376 /* Pods-Amazon 2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

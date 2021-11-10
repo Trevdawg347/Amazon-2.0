@@ -200,7 +200,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-vi-GGP" customClass="CustomTextField" customModule="Amazon_2_0" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-vi-GGP" customClass="CustomTextField" customModule="Amazon_2_0" customModuleProvider="target">
                                 <rect key="frame" x="15" y="476" width="384" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
@@ -209,7 +209,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-i5-tM9" customClass="CustomTextField" customModule="Amazon_2_0" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-i5-tM9" customClass="CustomTextField" customModule="Amazon_2_0" customModuleProvider="target">
                                 <rect key="frame" x="15" y="536" width="384" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
@@ -225,32 +225,76 @@
                                     <constraint firstAttribute="height" constant="50" id="hgw-v9-Ovq"/>
                                 </constraints>
                                 <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vC7-MQ-2Jf">
+                                <rect key="frame" x="15" y="656" width="384" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="L7A-u9-2MZ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KuU-2l-z72" kind="show" id="dy6-Qw-MOL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-RX-0jC">
+                                <rect key="frame" x="15" y="155" width="384" height="271"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="71"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OGd-FQ-pjL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OGd-FQ-pjL" firstAttribute="trailing" secondItem="Tfc-vi-GGP" secondAttribute="trailing" constant="15" id="0Vc-ql-MSn"/>
                             <constraint firstItem="OGd-FQ-pjL" firstAttribute="trailing" secondItem="dfT-i5-tM9" secondAttribute="trailing" constant="15" id="8jY-7D-SgB"/>
+                            <constraint firstItem="vC7-MQ-2Jf" firstAttribute="top" secondItem="bK4-kP-rr1" secondAttribute="bottom" constant="10" id="Bpy-fD-evo"/>
+                            <constraint firstItem="K6c-RX-0jC" firstAttribute="top" secondItem="OGd-FQ-pjL" secondAttribute="top" constant="15" id="OO8-8Q-rWe"/>
                             <constraint firstItem="OGd-FQ-pjL" firstAttribute="trailing" secondItem="bK4-kP-rr1" secondAttribute="trailing" constant="15" id="PPO-AV-6Cg"/>
                             <constraint firstItem="Tfc-vi-GGP" firstAttribute="centerY" secondItem="OGd-FQ-pjL" secondAttribute="centerY" id="czJ-R1-fre"/>
                             <constraint firstItem="dfT-i5-tM9" firstAttribute="leading" secondItem="OGd-FQ-pjL" secondAttribute="leading" constant="15" id="dgs-2m-tOp"/>
                             <constraint firstItem="dfT-i5-tM9" firstAttribute="top" secondItem="Tfc-vi-GGP" secondAttribute="bottom" constant="10" id="hAq-QW-otV"/>
+                            <constraint firstItem="vC7-MQ-2Jf" firstAttribute="leading" secondItem="OGd-FQ-pjL" secondAttribute="leading" constant="15" id="jJb-pk-qW2"/>
+                            <constraint firstItem="OGd-FQ-pjL" firstAttribute="trailing" secondItem="vC7-MQ-2Jf" secondAttribute="trailing" constant="15" id="joo-nt-Pnx"/>
                             <constraint firstItem="bK4-kP-rr1" firstAttribute="leading" secondItem="OGd-FQ-pjL" secondAttribute="leading" constant="15" id="kG7-nW-XYN"/>
+                            <constraint firstItem="K6c-RX-0jC" firstAttribute="leading" secondItem="OGd-FQ-pjL" secondAttribute="leading" constant="15" id="l7i-3D-jFk"/>
+                            <constraint firstItem="OGd-FQ-pjL" firstAttribute="trailing" secondItem="K6c-RX-0jC" secondAttribute="trailing" constant="15" id="u2O-2a-35I"/>
+                            <constraint firstItem="Tfc-vi-GGP" firstAttribute="top" secondItem="K6c-RX-0jC" secondAttribute="bottom" constant="50" id="uOA-LX-oqS"/>
                             <constraint firstItem="Tfc-vi-GGP" firstAttribute="leading" secondItem="OGd-FQ-pjL" secondAttribute="leading" constant="15" id="yhU-tL-dD9"/>
                             <constraint firstItem="bK4-kP-rr1" firstAttribute="top" secondItem="dfT-i5-tM9" secondAttribute="bottom" constant="10" id="zKH-Eh-jhc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="zOI-RG-eCZ"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="zOI-RG-eCZ"/>
                     <connections>
+                        <outlet property="emailTextField" destination="Tfc-vi-GGP" id="Z1F-k9-fOM"/>
                         <outlet property="loginButton" destination="bK4-kP-rr1" id="87w-Ma-S6x"/>
+                        <outlet property="passwordTextField" destination="dfT-i5-tM9" id="y3c-TG-Ikp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6l-GH-Rdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2043" y="-337"/>
+            <point key="canvasLocation" x="-2810.144927536232" y="-341.51785714285711"/>
+        </scene>
+        <!--Create Account-->
+        <scene sceneID="BCv-sd-QkP">
+            <objects>
+                <viewController title="Create Account" id="KuU-2l-z72" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hw1-0T-faJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z56-2j-Bhc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Account" largeTitleDisplayMode="never" id="tAl-vB-5hl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CaQ-2d-K9M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2103" y="-342"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vdJ-7M-TSh">
@@ -266,7 +310,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVQ-ys-T0J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2872" y="-337"/>
+            <point key="canvasLocation" x="-3517" y="-342"/>
         </scene>
     </scenes>
     <resources>
@@ -274,6 +318,9 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

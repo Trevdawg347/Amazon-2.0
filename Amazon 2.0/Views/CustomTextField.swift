@@ -11,7 +11,11 @@ class CustomTextField: UITextField {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-            
+        returnKeyType = .next
+    }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 30))
     }
     
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {

@@ -18,15 +18,18 @@ class PostView: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.contentView.width(UIScreen.main.bounds.width)
-        self.contentView.bottom(to: label)
     }
     
-    public func setup() {
+    public func setup(title: Bool) {
                 
-        label.text = "HI bro how's it going, HI bro how's it goingHI bro how's it goingHI bro how's it goingHI bro how's it goingHI bro how's it goingHI bro how's it goingHI bro how's it goingHI bro how's it going"
+        if title {
+        label.text = "$100,000"
+        } else {
+            label.text = "$10"
+        }
         
-        imageView.image = UIImage(systemName: "person.circle.fill")
+        imageView.image = UIImage(systemName: "trash.square.fill")
+        imageView.backgroundColor = .cyan
         
     }
     

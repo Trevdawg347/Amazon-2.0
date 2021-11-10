@@ -15,6 +15,7 @@
 		52BD16FD273B029F002A00ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BD16FB273B029F002A00ED /* LaunchScreen.storyboard */; };
 		E022ECD1273B4407002F81F9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022ECD0273B4407002F81F9 /* SearchViewController.swift */; };
 		E022ECD3273B440E002F81F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022ECD2273B440E002F81F9 /* ProfileViewController.swift */; };
+		E022ECD5273B4516002F81F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022ECD4273B4516002F81F9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		52BD16FE273B029F002A00ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E022ECD0273B4407002F81F9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E022ECD2273B440E002F81F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E022ECD4273B4516002F81F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				52BD16F4273B029C002A00ED /* ShopViewController.swift */,
 				E022ECD0273B4407002F81F9 /* SearchViewController.swift */,
 				E022ECD2273B440E002F81F9 /* ProfileViewController.swift */,
+				E022ECD4273B4516002F81F9 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E022ECD5273B4516002F81F9 /* LoginViewController.swift in Sources */,
 				52BD16F5273B029C002A00ED /* ShopViewController.swift in Sources */,
 				52BD16F1273B029C002A00ED /* AppDelegate.swift in Sources */,
 				E022ECD3273B440E002F81F9 /* ProfileViewController.swift in Sources */,

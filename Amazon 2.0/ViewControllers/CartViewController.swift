@@ -8,9 +8,15 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    func addConstraints() {
+        scrollView.edgesToSuperview()
     }
 }

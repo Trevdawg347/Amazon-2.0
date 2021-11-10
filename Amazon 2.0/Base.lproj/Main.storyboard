@@ -34,14 +34,25 @@
                     <view key="view" contentMode="scaleToFill" id="chN-NE-oNC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIS-QJ-SZ0">
+                                <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="f0n-Si-Vt2"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="C1E-0h-9Q8"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7kg-qF-cSO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Cart" id="kiS-Wu-OKD"/>
+                    <connections>
+                        <outlet property="scrollView" destination="tIS-QJ-SZ0" id="x5u-Hj-0Ih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umk-Kh-lII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-161"/>
+            <point key="canvasLocation" x="702.89855072463774" y="-171.42857142857142"/>
         </scene>
         <!--Shop-->
         <scene sceneID="48d-l1-q95">

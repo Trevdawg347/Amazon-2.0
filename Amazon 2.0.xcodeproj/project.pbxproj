@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		047213092EDF80607CF3A202 /* Pods_Amazon_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1791C11132CBE00EB6FABD93 /* Pods_Amazon_2_0.framework */; };
+		525A1FA4273B825C003E50A5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A1FA3273B825C003E50A5 /* CustomTextField.swift */; };
 		52BC52E6273B4AB700B1D2C3 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC52E5273B4AB700B1D2C3 /* Firebase.swift */; };
 		52BC52E8273B77F100B1D2C3 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC52E7273B77F100B1D2C3 /* SearchTextField.swift */; };
 		52BD16F1273B029C002A00ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16F0273B029C002A00ED /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1791C11132CBE00EB6FABD93 /* Pods_Amazon_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Amazon_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		525A1FA3273B825C003E50A5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		52BC52E5273B4AB700B1D2C3 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		52BC52E7273B77F100B1D2C3 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		52BD16ED273B029C002A00ED /* Amazon 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amazon 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				52BC52E7273B77F100B1D2C3 /* SearchTextField.swift */,
+				525A1FA3273B825C003E50A5 /* CustomTextField.swift */,
 				E022ECD7273B65E6002F81F9 /* PostView.swift */,
 				E022ECD8273B65E6002F81F9 /* PostView.xib */,
 			);
@@ -255,6 +258,7 @@
 				E022ECD5273B4516002F81F9 /* LoginViewController.swift in Sources */,
 				E022ECD9273B65E6002F81F9 /* PostView.swift in Sources */,
 				52BD16F5273B029C002A00ED /* ShopViewController.swift in Sources */,
+				525A1FA4273B825C003E50A5 /* CustomTextField.swift in Sources */,
 				52BD16F1273B029C002A00ED /* AppDelegate.swift in Sources */,
 				E022ECD3273B440E002F81F9 /* ProfileViewController.swift in Sources */,
 				E022ECD1273B4407002F81F9 /* SearchViewController.swift in Sources */,

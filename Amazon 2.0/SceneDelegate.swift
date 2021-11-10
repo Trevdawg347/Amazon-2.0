@@ -8,15 +8,15 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
+    private let fb = Firebase.shared
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         window.makeKeyAndVisible()
-        if false {
+        if fb.isSignedIn {
             window.rootViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "Tab")
         } else {
             window.rootViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "Login")

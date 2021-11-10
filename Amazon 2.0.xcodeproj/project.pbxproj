@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52BC52E6273B4AB700B1D2C3 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC52E5273B4AB700B1D2C3 /* Firebase.swift */; };
 		52BD16F1273B029C002A00ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16F0273B029C002A00ED /* AppDelegate.swift */; };
 		52BD16F3273B029C002A00ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16F2273B029C002A00ED /* SceneDelegate.swift */; };
 		52BD16F5273B029C002A00ED /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD16F4273B029C002A00ED /* ShopViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52BC52E5273B4AB700B1D2C3 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		52BD16ED273B029C002A00ED /* Amazon 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amazon 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD16F0273B029C002A00ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52BD16F2273B029C002A00ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52BC52E4273B4A9D00B1D2C3 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				52BC52E5273B4AB700B1D2C3 /* Firebase.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		52BD16E4273B029C002A00ED = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 			children = (
 				52BD16F0273B029C002A00ED /* AppDelegate.swift */,
 				52BD16F2273B029C002A00ED /* SceneDelegate.swift */,
+				52BC52E4273B4A9D00B1D2C3 /* Firebase */,
 				E022ECCF273B4354002F81F9 /* ViewControllers */,
 				52BD16F6273B029C002A00ED /* Main.storyboard */,
 				52BD16F9273B029F002A00ED /* Assets.xcassets */,
@@ -154,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BC52E6273B4AB700B1D2C3 /* Firebase.swift in Sources */,
 				E022ECD5273B4516002F81F9 /* LoginViewController.swift in Sources */,
 				52BD16F5273B029C002A00ED /* ShopViewController.swift in Sources */,
 				52BD16F1273B029C002A00ED /* AppDelegate.swift in Sources */,

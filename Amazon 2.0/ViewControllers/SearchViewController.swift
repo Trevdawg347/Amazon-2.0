@@ -31,7 +31,7 @@ extension SearchViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostView.identifier, for: indexPath) as! PostView
-        cell.setup()
+        cell.setup(title: indexPath.row.isMultiple(of: 4))
         return cell
     }
 }

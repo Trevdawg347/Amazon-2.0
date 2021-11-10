@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -327,8 +328,44 @@
                     <view key="view" contentMode="scaleToFill" id="Hw1-0T-faJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hdw-MM-c0o" customClass="CustomTextField" customModule="Amazon_2_0" customModuleProvider="target">
+                                <rect key="frame" x="15" y="98" width="384" height="50"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8ap-6x-YEu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="egf-JF-6UN" customClass="CustomTextField" customModule="Amazon_2_0" customModuleProvider="target">
+                                <rect key="frame" x="15" y="158" width="384" height="50"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HFe-33-KBH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leN-5n-4h5">
+                                <rect key="frame" x="15" y="545" width="384" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="z56-2j-Bhc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hdw-MM-c0o" firstAttribute="top" secondItem="z56-2j-Bhc" secondAttribute="top" constant="10" id="RGy-Hx-r11"/>
+                            <constraint firstItem="egf-JF-6UN" firstAttribute="top" secondItem="hdw-MM-c0o" secondAttribute="bottom" constant="10" id="UAQ-9J-qgX"/>
+                            <constraint firstItem="z56-2j-Bhc" firstAttribute="trailing" secondItem="hdw-MM-c0o" secondAttribute="trailing" constant="15" id="ZSX-yA-Kek"/>
+                            <constraint firstItem="z56-2j-Bhc" firstAttribute="trailing" secondItem="egf-JF-6UN" secondAttribute="trailing" constant="15" id="gw4-uZ-OOE"/>
+                            <constraint firstItem="hdw-MM-c0o" firstAttribute="leading" secondItem="z56-2j-Bhc" secondAttribute="leading" constant="15" id="osE-lx-muT"/>
+                            <constraint firstItem="egf-JF-6UN" firstAttribute="leading" secondItem="z56-2j-Bhc" secondAttribute="leading" constant="15" id="t2P-cc-yZV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Account" largeTitleDisplayMode="never" id="tAl-vB-5hl"/>
                 </viewController>

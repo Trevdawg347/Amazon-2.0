@@ -33,8 +33,8 @@
             <objects>
                 <navigationController id="Db1-dF-51i" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shop" image="list.dash" catalog="system" id="9Zq-Y0-Q7T"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rkH-sO-oic">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rkH-sO-oic">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -48,26 +48,26 @@
         <!--Shop-->
         <scene sceneID="9fO-j5-8Yp">
             <objects>
-                <viewController title="Shop" id="QhR-th-e10" sceneMemberID="viewController">
+                <viewController title="Shop" id="QhR-th-e10" customClass="ShopViewController" customModule="Amazon_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l0E-ax-Cdh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="X7U-X6-fgy"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Gj-jD-sZL"/>
+                    <navigationItem key="navigationItem" title="Shop" largeTitleDisplayMode="always" id="1Gj-jD-sZL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNm-b0-KDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1974" y="1269"/>
+            <point key="canvasLocation" x="-1878" y="1264"/>
         </scene>
         <!--Search-->
         <scene sceneID="Wjp-nE-wdd">
             <objects>
                 <navigationController id="X2x-zy-f9W" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="LLV-jT-HHA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ICk-yO-u49">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ICk-yO-u49">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -83,8 +83,8 @@
             <objects>
                 <navigationController id="Zrp-sI-Vfz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person.fill" id="Zds-1b-emr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QB0-qP-32j">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="QB0-qP-32j">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -93,35 +93,35 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gH-sc-VKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="573"/>
+            <point key="canvasLocation" x="-204" y="548"/>
         </scene>
         <!--Search-->
         <scene sceneID="hUc-zE-LtK">
             <objects>
-                <viewController title="Search" id="bdB-4U-yBg" sceneMemberID="viewController">
+                <viewController title="Search" id="bdB-4U-yBg" customClass="SearchViewController" customModule="Amazon_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5Y-lM-lMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="gm8-Pe-APi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VBz-il-dso"/>
+                    <navigationItem key="navigationItem" title="Search" id="VBz-il-dso"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANd-LG-MyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1033" y="1280"/>
+            <point key="canvasLocation" x="-988" y="1280"/>
         </scene>
         <!--Profile-->
         <scene sceneID="hKf-PM-ufo">
             <objects>
-                <viewController title="Profile" id="1kA-l9-WHk" sceneMemberID="viewController">
+                <viewController title="Profile" id="1kA-l9-WHk" customClass="ProfileViewController" customModule="Amazon_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f62-BR-w9z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="K0b-7F-9hE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="03w-ek-4bv"/>
+                    <navigationItem key="navigationItem" title="Profile" id="03w-ek-4bv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8e-AN-zpo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,9 +135,6 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

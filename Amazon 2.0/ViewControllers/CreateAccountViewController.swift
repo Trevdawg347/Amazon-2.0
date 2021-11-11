@@ -10,6 +10,7 @@ import UIKit
 class CreateAccountViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
+
     @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet weak var firstNameTextField: CustomTextField!
     @IBOutlet weak var lastNameTextField: CustomTextField!
@@ -17,11 +18,32 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var confirmPasswordTextField: CustomTextField!
+    @IBOutlet weak var createAccountButton: UIButton!
 
     private var keyboardShowing: Bool = false
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //Notify when keyboard appears or dissappears
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //Remove observer
+        NotificationCenter.default.removeObserver(self)
+    }
         
     override func viewDidLoad() {
+
+        
         super.viewDidLoad()
+    
+        //Create Account
+        createAccountButton.addAction(UIAction() { _ in
+            self.view.endEditing(true)
+        }, for: .touchUpInside)
+        
+
         
         //TextFields
         firstNameTextField.delegate = self
@@ -29,11 +51,10 @@ class CreateAccountViewController: UIViewController {
         usernameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.delegate = self
         confirmPasswordTextField.returnKeyType = .done
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: UIResponder.keyboardDidHideNotification, object: nil)
+        confirmPasswordTextField.isSecureTextEntry = true
     }
     
     @objc func handleKeyboard(notification: NSNotification) {
@@ -41,11 +62,13 @@ class CreateAccountViewController: UIViewController {
             if notification.name == UIResponder.keyboardDidShowNotification && !keyboardShowing {
                 keyboardShowing = true
                 contentViewHeight.constant += keyboardSize.height
+                view.layoutIfNeeded()
             } else if notification.name == UIResponder.keyboardDidHideNotification && keyboardShowing {
                 keyboardShowing = false
                 contentViewHeight.constant = 0
+                view.layoutIfNeeded()
             }
-            view.layoutIfNeeded()
+            
         }
     }
 }

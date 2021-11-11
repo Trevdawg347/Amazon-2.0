@@ -13,7 +13,7 @@ class CartViewController: UIViewController {
     @IBOutlet private weak var confirmPaymentButton: UIButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         self.navigationItem.largeTitleDisplayMode = .never
         collectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()

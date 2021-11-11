@@ -13,19 +13,24 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Collection View
         collectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 2
         layout.minimumInteritemSpacing = 2
         layout.itemSize = CGSize(width: view.bounds.width / 3 - 2, height: view.bounds.width / 3 - 2)
         collectionView.collectionViewLayout = layout
+        collectionView.keyboardDismissMode = .interactive
         collectionView.register(PostView.nib(), forCellWithReuseIdentifier: PostView.identifier)
         
+        //Cart Button
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "cart"), primaryAction: UIAction() { [weak self] _ in
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "cart")
             vc.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(vc, animated: true)
         })
+        
     }
 }
 

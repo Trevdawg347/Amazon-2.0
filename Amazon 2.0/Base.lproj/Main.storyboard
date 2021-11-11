@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R8Y-vA-JY0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,14 +34,50 @@
                     <view key="view" contentMode="scaleToFill" id="chN-NE-oNC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t2o-Ek-JI2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5H7-fj-G0K">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR5-et-xWl">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DMe-S1-Uik"/>
+                                </constraints>
+                                <state key="normal" title="Confirm Payment">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7kg-qF-cSO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7kg-qF-cSO" firstAttribute="trailing" secondItem="UR5-et-xWl" secondAttribute="trailing" id="4Zq-m8-mNp"/>
+                            <constraint firstItem="7kg-qF-cSO" firstAttribute="bottom" secondItem="UR5-et-xWl" secondAttribute="bottom" id="4vA-ue-eTx"/>
+                            <constraint firstItem="UR5-et-xWl" firstAttribute="leading" secondItem="7kg-qF-cSO" secondAttribute="leading" id="BW3-Lj-CtV"/>
+                            <constraint firstItem="UR5-et-xWl" firstAttribute="top" secondItem="t2o-Ek-JI2" secondAttribute="bottom" id="YJ2-CR-hjT"/>
+                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="top" secondItem="7kg-qF-cSO" secondAttribute="top" id="oo8-kr-SVi"/>
+                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="leading" secondItem="7kg-qF-cSO" secondAttribute="leading" id="pLb-zc-lQe"/>
+                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="trailing" secondItem="7kg-qF-cSO" secondAttribute="trailing" id="uPb-bJ-Nhg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Cart" id="kiS-Wu-OKD"/>
+                    <connections>
+                        <outlet property="collectionView" destination="t2o-Ek-JI2" id="S0b-uo-pcc"/>
+                        <outlet property="confirmPaymentButton" destination="UR5-et-xWl" id="cbj-he-Pyp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umk-Kh-lII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-161"/>
+            <point key="canvasLocation" x="94" y="-342"/>
         </scene>
         <!--Shop-->
         <scene sceneID="48d-l1-q95">

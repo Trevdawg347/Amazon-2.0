@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t2o-Ek-JI2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5H7-fj-G0K">
                                     <size key="itemSize" width="128" height="128"/>
@@ -46,24 +46,38 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR5-et-xWl">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DMe-S1-Uik"/>
+                                </constraints>
+                                <state key="normal" title="Confirm Payment">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7kg-qF-cSO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7kg-qF-cSO" firstAttribute="trailing" secondItem="t2o-Ek-JI2" secondAttribute="trailing" id="A4x-Pq-a2N"/>
-                            <constraint firstItem="7kg-qF-cSO" firstAttribute="bottom" secondItem="t2o-Ek-JI2" secondAttribute="bottom" id="D2H-Wq-WlZ"/>
-                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="leading" secondItem="7kg-qF-cSO" secondAttribute="leading" id="bJg-wz-zEH"/>
-                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="top" secondItem="7kg-qF-cSO" secondAttribute="top" id="hpz-ul-Te8"/>
+                            <constraint firstItem="7kg-qF-cSO" firstAttribute="trailing" secondItem="UR5-et-xWl" secondAttribute="trailing" id="4Zq-m8-mNp"/>
+                            <constraint firstItem="7kg-qF-cSO" firstAttribute="bottom" secondItem="UR5-et-xWl" secondAttribute="bottom" id="4vA-ue-eTx"/>
+                            <constraint firstItem="UR5-et-xWl" firstAttribute="leading" secondItem="7kg-qF-cSO" secondAttribute="leading" id="BW3-Lj-CtV"/>
+                            <constraint firstItem="UR5-et-xWl" firstAttribute="top" secondItem="t2o-Ek-JI2" secondAttribute="bottom" id="YJ2-CR-hjT"/>
+                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="top" secondItem="7kg-qF-cSO" secondAttribute="top" id="oo8-kr-SVi"/>
+                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="leading" secondItem="7kg-qF-cSO" secondAttribute="leading" id="pLb-zc-lQe"/>
+                            <constraint firstItem="t2o-Ek-JI2" firstAttribute="trailing" secondItem="7kg-qF-cSO" secondAttribute="trailing" id="uPb-bJ-Nhg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Cart" id="kiS-Wu-OKD"/>
                     <connections>
                         <outlet property="collectionView" destination="t2o-Ek-JI2" id="S0b-uo-pcc"/>
+                        <outlet property="confirmPaymentButton" destination="UR5-et-xWl" id="cbj-he-Pyp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umk-Kh-lII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702.89855072463774" y="-171.42857142857142"/>
+            <point key="canvasLocation" x="94" y="-342"/>
         </scene>
         <!--Shop-->
         <scene sceneID="48d-l1-q95">

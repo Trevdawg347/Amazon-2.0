@@ -10,6 +10,7 @@ import UIKit
 class CartViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var confirmPaymentButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

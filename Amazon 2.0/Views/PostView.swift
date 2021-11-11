@@ -13,7 +13,6 @@ class PostView: UICollectionViewCell {
     static let identifier = "post"
     
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var label: UILabel!
     
     override func awakeFromNib() {

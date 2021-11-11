@@ -9,14 +9,28 @@ import UIKit
 
 class CartViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
+        collectionView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 100)
+        collectionView.collectionViewLayout = layout
+        collectionView.register(CartView.nib(), forCellWithReuseIdentifier: CartView.identifier)
+    }
+}
+
+extension CartViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CartView.identifier, for: indexPath) as! CartView
+        cell.setup()
+        return cell
     }
     
-    func addConstraints() {
-        scrollView.edgesToSuperview()
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
     }
 }
